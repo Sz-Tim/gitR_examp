@@ -44,7 +44,14 @@ git config --global user.email "your_email@example.com"
 ### Merge conflicts  
 This is an example of a merge conflict. If two people are working on the same file (or you're on two computers) and both commit their changes and try to push to the repository, git will do its best to merge the files. 
 If the changes made were to different lines and there are no conflicts, it will merge automatically. 
-If there are edits to the same line(s), git will issue a warning and mark the conflicting lines so you can decide how to merge them appropriately. 
+If there are edits to the same line(s), git will issue a warning and mark the conflicting lines so you can decide how to merge them appropriately.  
+  
+<<<<<<< HEAD
 This is what a merge conflict looks like:  
   
 line of code from computer B  
+=======
+This is what a merge conflict looks like: 
+  
+line of code from computer A
+>>>>>>> 6bfad14a0c08d8e975fdeeaa2d8fcd597be5a2f3
