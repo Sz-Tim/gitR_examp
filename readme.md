@@ -12,7 +12,7 @@ It is freely available from https://git-scm.com/downloads.
 Once it is installed, you're ready to use git locally to track your files.  
 
 There are several websites that allow you to store your projects for free on their servers (e.g., GitHub or BitBucket). 
-These are great for collaboration, for keeping a remote backup of your work, and for some additional functionality, but you can still use git locally on your computerwithout using these services.  
+These are great for collaboration, for keeping a remote backup of your work, and for some additional functionality, but you can still use git locally on your computer without using these services.  
 
 ### RStudio  
 Once git is installed, open the **Global Options** from the Tools menu. 
@@ -46,3 +46,4 @@ This is an example of a merge conflict. If two people are working on the same fi
 If the changes made were to different lines and there are no conflicts, it will merge automatically. 
 If there are edits to the same line(s), git will issue a warning and mark the conflicting lines so you can decide how to merge them appropriately. 
 This is what a merge conflict looks like: 
+line of code from computer A
