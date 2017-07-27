@@ -46,9 +46,3 @@ This is an example of a merge conflict. If two people are working on the same fi
 If the changes made were to different lines and there are no conflicts, it will merge automatically. 
 If there are edits to the same line(s), git will issue a warning and mark the conflicting lines so you can decide how to merge them appropriately. 
 This is what a merge conflict looks like: 
-<<<<<<< HEAD
-line of code from computer A
-||||||| merged common ancestors
-=======
-Line of code from computer B
->>>>>>> 732378389ca97a33d04d3339240c4294385b9faf
