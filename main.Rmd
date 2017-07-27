@@ -1,0 +1,64 @@
+---
+title: "git-RStudio example"
+subtitle: "Main R script"
+author: "Tim Szewczyk"
+date: "7/27/2017"
+output: html_document
+---
+
+***  
+
+# Description  
+This script runs the simulation and plots the output. It is the same as *main.R*, but is in R Markdown format.  
+
+***  
+
+# Population dynamics simulation  
+This is a simple simulation where independent populations are simulated within each cell of a gridded landscape. The carrying capacity in each cell is determined by the land cover category, and the growth rate is a function of covariates (here, temperature and precipitation -- both made up).  
+
+#### Set environment  
+```{r setEnv, message=FALSE}
+library(ggplot2); theme_set(theme_bw()); library(magrittr)
+source("simData.R")
+```
+
+
+#### Set parameters
+```{r setPars}
+grd.dim <- c(5, 5)  # landscape dimensions
+nCov <- 2           # number of growth rate covariates
+tmax <- 50          # number of time steps
+```
+
+
+#### Run simulation
+There are two functions in *simData.R*. One initializes the covariates, slopes, carrying capacities, and calculates the base growth rate for each cell. The second uses that output as input to simulate the population growth within each cell for the assigned number of time steps.  
+```{r simulatePops}
+init <- initialize_sim(grd.dim, nCov)
+N <- popGrowth_sim(init$r, init$K, tmax)
+```
+
+
+#### Reshape for plotting
+Note: '%>%' is a pipe operator in the *magrittr* or *tidyverse* packages. It makes reading code easier when you combine multiple functions (compared to the typical nesting). It's unnecessary here, but I included it as an example because it's handy for more complicated operations. The *tidyverse* package is great for working with data.
+```{r reshapeOut}
+N.df <- data.frame(N=c(N),
+                   cell=1:prod(grd.dim) %>% rep(each=tmax), 
+                   time=1:tmax %>% rep(prod(grd.dim)))
+N.df[,(1:nCov)+3] <- init$X %>% rep(each=tmax)
+names(N.df)[(1:nCov)+3] <- colnames(init$X)
+N.df$LC <- init$LC %>% rep(each=tmax) %>% factor
+```
+
+
+#### Visualize
+```{r plots}
+ggplot(N.df, aes(x=time, y=N, group=cell, colour=Temp)) + 
+  geom_line() + ylim(0,NA) + facet_wrap(~LC) +
+  scale_colour_gradient2(low="#313695", mid="#bdbdbd", high="#a50026")
+
+ggplot(N.df, aes(x=time, y=N, group=cell, colour=Precip)) + 
+  geom_line() + ylim(0,NA) + facet_wrap(~LC) + 
+  scale_colour_gradient2(low="#8c510a", mid="#bdbdbd", high="#01665e")
+```
+
