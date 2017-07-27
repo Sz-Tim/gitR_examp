@@ -12,7 +12,7 @@ https://git-scm.com/downloads. Once it is installed, you're ready to use git
 locally to track your files.  
 
 There are several websites that allow you to store your projects for free on 
-their servers (e.g., Github or Bitbucket). These are great for collaboration, 
+their servers (e.g., GitHub or BitBucket). These are great for collaboration, 
 for keeping a remote backup of your work, and for some additional functionality, 
 but you can still use git locally on your computerwithout using these services. 
 
