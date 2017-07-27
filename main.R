@@ -15,7 +15,7 @@ K <- 100
 tmax <- 50
 
 # Simulate
-init <- initialize_sim(grd.dim[1], grd.dim[2], nCov)
+init <- initialize_sim(grd.dim, nCov)
 N <- popGrowth_sim(init$r, init$K, tmax)
 
 # Reshape output

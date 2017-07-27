@@ -7,13 +7,12 @@
 # This script contains functions for generating covariates and slopes, and 
 # simulating simple population dynamics in a gridded landscape
 
-initialize_sim <- function(grid_rows=5,  # number of rows in landscape
-                           grid_cols=5,  # number of columns in landscape
-                           nCov=2) {      # number of covariates
+initialize_sim <- function(grid.dim=c(5,5),  # number of rows & columns in landscape
+                           nCov=2) {         # number of covariates
   
   # generate covariates
-  X <- matrix(runif(grid_rows*grid_cols*nCov, -2, 2), ncol=nCov,
-              dimnames=list(1:(grid_rows*grid_cols), c("Temp", "Precip")))
+  X <- matrix(runif(prod(grid.dim)*nCov, -2, 2), ncol=nCov,
+              dimnames=list(1:prod(grid.dim), c("Temp", "Precip")))
   # generate slopes
   b <- runif(nCov, -0.5, 0.5)
   # set intercept
@@ -23,7 +22,7 @@ initialize_sim <- function(grid_rows=5,  # number of rows in landscape
   r <- X %*% b + a
   
   # generate carrying capacities based on land cover types
-  LC <- sample(1:4, grid_rows*grid_cols, replace=TRUE)
+  LC <- sample(1:4, prod(grid.dim), replace=TRUE)
   K <- c(50, 100, 150, 200)[LC]
   
   # return all
