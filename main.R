@@ -29,6 +29,7 @@ N.df$LC <- init$LC %>% rep(each=tmax) %>% factor
 # Visualize
 ggplot(N.df, aes(x=time, y=N, group=cell, colour=Temp)) + 
   geom_line() + ylim(0,NA) + facet_wrap(~LC) +
+  labs(x="Year", y="Population abundance") +
   scale_colour_gradient2(low="#313695", mid="#bdbdbd", high="#a50026")
 
 ggplot(N.df, aes(x=time, y=N, group=cell, colour=Precip)) + 
