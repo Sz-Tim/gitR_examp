@@ -3,6 +3,16 @@
 *2017 Aug 1*  
 *Readme*  
 
+## Practice: Staging, committing, pushing, & pulling  
+Everyone add something to the line with their name on it:  
+
+Ceara:
+
+Jenica:  
+
+Mitch:  
+
+Tim:  
 
 
 ## Getting started  
