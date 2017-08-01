@@ -12,7 +12,7 @@ Jenica:
 
 Mitch:  
 
-Tim:  
+Tim: sample text  
 
 
 ## Getting started  
