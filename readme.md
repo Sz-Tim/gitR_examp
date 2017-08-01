@@ -10,7 +10,7 @@ Ceara:
 
 Jenica:  
 
-Mitch:  
+Mitch: sample text  
 
 Tim: sample text  
 
