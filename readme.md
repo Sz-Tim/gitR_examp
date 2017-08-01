@@ -40,8 +40,10 @@ You'll need to restart RStudio for the changes to take effect.
 	3. Check box to enable version control
 	4. Restart RStudio
 	5. Git tab > More > Shell..
-	   + git config --global user.name "Name"  
-	   + git config --global user.email "email@example.com"
+```
+git config --global user.name "Your Name Here"  
+git config --global user.email "your_email@example.com"  
+```
 4. Two ways to start a new project w/RStudio + Github
 	1. Start through RStudio
 		a. New Project > New Directory > Empty Project
