@@ -64,7 +64,7 @@ You'll need to restart RStudio for the changes to take effect.
 	+ Option 1: click *Clone or download* button, download ZIP
 		+ gives you the whole repo, but git behaves oddly
 	+ Option 2: Clone through RStudio 
-		1. Copy the repo URL
+		1. Copy the repo URL (https://github.com/Sz-Tim/gitR_examp.git)
 		2. Open RStudio
 			+ New Project > Version Control > Git > paste URL
 6. Controlling your versions
