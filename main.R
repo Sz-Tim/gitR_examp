@@ -34,4 +34,5 @@ ggplot(N.df, aes(x=time, y=N, group=cell, colour=Temp)) +
 
 ggplot(N.df, aes(x=time, y=N, group=cell, colour=Precip)) + 
   geom_line() + ylim(0,NA) + facet_wrap(~LC) + 
+  labs(x="Year", y="Population abundance")+
   scale_colour_gradient2(low="#8c510a", mid="#bdbdbd", high="#01665e")
