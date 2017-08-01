@@ -8,7 +8,7 @@ Everyone add something to the line with their name on it:
 
 Ceara:
 
-Jenica:  
+Jenica:  Go, darn it.
 
 Mitch: sample text  
 
