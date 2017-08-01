@@ -44,41 +44,41 @@ You'll need to restart RStudio for the changes to take effect.
 git config --global user.name "Your Name Here"  
 git config --global user.email "your_email@example.com"  
 ```
-4. Two ways to start a new project w/RStudio + Github
-	1. Start through RStudio
-		a. New Project > New Directory > Empty Project
-			+ check *Create a git repository*
-		b. Open GitHub in browser
-			+ create repo with same name as project
-			+ DO NOT initialize with a readme
-			+ copy code to *Push an existing repository from the command line*
-		c. Back in RStudio
-			+ open shell, paste code
-			+ push commits
-	2. Start through GitHub
-		a. Open GitHub in browser
-			+ create repo
-			+ initialize with a readme
-			+ copy the repo URL
-		b. Open RStudio
-			+ New Project > Version Control > Git > paste URL
-5. Clone example repo (use option 2)
-	+ Option 1: click *Clone or download* button, download ZIP
-		+ gives you the whole repo, but git behaves oddly
-	+ Option 2: Clone through RStudio 
-		1. Copy the repo URL (https://github.com/Sz-Tim/gitR_examp.git)
-		2. Open RStudio
-			+ New Project > Version Control > Git > paste URL
-6. Controlling your versions
-	1. Pull
-	2. Change a file
-	3. Save it and stage the version
-	4. Commit + message
-	5. Push
-	6. Pull
+4. Two ways to start a new project w/RStudio + Github  
+	1. Start through RStudio  
+		a. New Project > New Directory > Empty Project  
+			+ check *Create a git repository*  
+		b. Open GitHub in browser  
+			+ create repo with same name as project  
+			+ DO NOT initialize with a readme  
+			+ copy code to *Push an existing repository from the command line*  
+		c. Back in RStudio  
+			+ open shell, paste code  
+			+ push commits  
+	2. Start through GitHub  
+		a. Open GitHub in browser  
+			+ create repo  
+			+ initialize with a readme  
+			+ copy the repo URL  
+		b. Open RStudio  
+			+ New Project > Version Control > Git > paste URL  
+5. Clone example repo (use option 2)  
+	+ Option 1: click *Clone or download* button, download ZIP  
+		+ gives you the whole repo, but git behaves oddly  
+	+ Option 2: Clone through RStudio  
+		1. Copy the repo URL (https://github.com/Sz-Tim/gitR_examp.git)  
+		2. Open RStudio  
+			+ New Project > Version Control > Git > paste URL  
+6. Controlling your versions  
+	1. Pull  
+	2. Change a file  
+	3. Save it and stage the version  
+	4. Commit + message  
+	5. Push  
+	6. Pull  
 7. .gitignore  
-	+ list files you don't want to track, but have in your project folder  
-8. Github features -- controlling editing, collaborators
+	+ list files you don't want to track, but have in your project folder    
+8. Github features -- controlling editing, collaborators  
 
 
 
