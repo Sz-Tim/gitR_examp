@@ -6,7 +6,7 @@
 ## Practice: Staging, committing, pushing, & pulling  
 Everyone add something to the line with their name on it:  
 
-Ceara:
+Ceara:Hello World
 
 Jenica:  Go, darn it.
 
